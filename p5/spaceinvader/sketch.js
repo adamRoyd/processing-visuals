@@ -56,16 +56,14 @@ function draw() {
     fill(0, 25);
     rect(0, 0, windowWidth, windowHeight);
 
-    radius = map(runner, 0, windowHeight, 200, 350);
+    radius = map(rms*-8000, 0, windowHeight, 200, 150);
 
-    runner+= 1;
+    runner+= 0.1;
 
 
-    r = norm(rms,0,0.1)*255;
-    g =  norm(spectrum[600],0,1)*255;
-    b = spectrum[2];
-
-    console.log(spectrum.length);
+    r = 250;
+    g =  rms*1000;
+    b = rms*2000;
 
     scaleX = map(runner, 0, windowWidth, 1.5, 11.5);
     scaleY = map(runner, 0, windowHeight, 1.5, 11.5);
